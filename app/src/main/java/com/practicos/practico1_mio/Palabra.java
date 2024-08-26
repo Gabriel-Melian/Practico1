@@ -1,15 +1,21 @@
 package com.practicos.practico1_mio;
 
-public class Palabra {
+import java.io.Serializable;
+
+public class Palabra implements Serializable {
 
     private String palabraEspanol;
     private String palabraIngles;
-    private String img;
+    private int img;
 
-    public Palabra(String palabraEspanol, String palabraIngles, String img) {
+    public Palabra(String palabraEspanol, String palabraIngles, int img) {
         this.palabraEspanol = palabraEspanol;
         this.palabraIngles = palabraIngles;
         this.img = img;
+    }
+
+    public Palabra() {
+
     }
 
     public String getPalabraEspanol() {
@@ -20,7 +26,19 @@ public class Palabra {
         return palabraIngles;
     }
 
-    public String getImg() {
+    public int getImg() {
         return img;
+    }
+
+    public void setImg(int img) {
+        this.img = img;
+    }
+
+    public void setPalabraIngles(String palabraIngles) {
+        this.palabraIngles = palabraIngles;
+    }
+
+    public void setPalabraEspanol(String palabraEspanol) {
+        this.palabraEspanol = palabraEspanol;
     }
 }
